@@ -25,5 +25,5 @@
 - Orçamento: pelo WhatsApp, a partir do site.
 
 ## Páginas
-- [Início](https://barbosaterraplanagem.com.br/): serviços, frota, orçamento rápido e perguntas frequentes.
-- [Política de privacidade](https://barbosaterraplanagem.com.br/privacidade/)
+- [Início](https://linikerwambaster.github.io/barbosa-terraplanagem-site/): serviços, frota, orçamento rápido e perguntas frequentes.
+- [Política de privacidade](https://linikerwambaster.github.io/barbosa-terraplanagem-site/privacidade/)

@@ -3,6 +3,8 @@
 (function () {
   var TAG = "";            // ex.: "AW-123456789" ou "G-XXXXXXX" (fica vazio até a conta do Google Ads existir)
   var CHAVE = "bt-cookies"; // "aceito" ou "recusado"
+  // pasta onde o site está (funciona no domínio próprio e no GitHub Pages)
+  var BASE = ((document.currentScript && document.currentScript.src) || "").replace(/consentimento\.js.*$/, "");
 
   // Padrão do Google: tudo negado até a pessoa aceitar
   window.dataLayer = window.dataLayer || [];
@@ -65,7 +67,7 @@
     aviso.className = "bt-aviso";
     aviso.setAttribute("role", "dialog");
     aviso.setAttribute("aria-label", "Aviso de cookies");
-    aviso.innerHTML = '<p>🍪 Usamos cookies para medir as visitas e os anúncios do site. Você escolhe se aceita. <a href="/privacidade/">Saiba mais</a></p>' +
+    aviso.innerHTML = '<p>🍪 Usamos cookies para medir as visitas e os anúncios do site. Você escolhe se aceita. <a href="' + BASE + 'privacidade/">Saiba mais</a></p>' +
       '<div class="bt-b"><button type="button" class="bt-r">Recusar</button><button type="button" class="bt-a">Aceitar</button></div>';
     aviso.querySelector(".bt-a").addEventListener("click", function () { gravar("aceito"); fechar(); ligar(); });
     aviso.querySelector(".bt-r").addEventListener("click", function () { gravar("recusado"); fechar(); desligar(); });
